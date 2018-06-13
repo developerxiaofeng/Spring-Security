@@ -1,0 +1,14 @@
+spring:
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      time-to-live: 3600000ms
+  redis:
+    host: 192.168.0.63
+    port: 6379
+    database: 5
+    password:
+logging:
+  level:
+    root: info
