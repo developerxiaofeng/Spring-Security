@@ -1,4 +1,4 @@
-![666.png]
+![Spring-Security/src/main/resources/static/666.png]
 如图通用的用户权限模型,一般情况会有5张表,分别是用户表,角色表,权限表,用户角色关系表,角色权限对应表
 一般,资源的分配是基于角色分配的(即,资源访问权限赋予非角色,用户通过角色进而拥有权限);而访问资源的时候是基于资源权限去授权判断的
 Spring Security和Apache Shiro是两个应用比较多的权限管理框架.Spring Security依赖Spring,其功能强大,相对于Shiro学习难度较大
