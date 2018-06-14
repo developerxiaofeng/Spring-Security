@@ -44,4 +44,5 @@ public class SysUser implements Serializable {
         this.username = username;
         this.password = password;
     }
+
 }

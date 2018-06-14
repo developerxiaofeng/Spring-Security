@@ -4,6 +4,7 @@ import com.lianxi.securitytest.entity.SysPermission;
 import com.lianxi.securitytest.entity.SysRole;
 import com.lianxi.securitytest.entity.SysUser;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -44,15 +45,18 @@ public class UserDao {
     public SysUser selectByName(String username) {
         log.info("从数据库中查询用户");
         if ("zhangsan".equals(username)) {
-            SysUser sysUser = new SysUser("zhangsan", "$2a$10$EIfFrWGINQzP.tmtdLd2hurtowwsIEQaPFR9iffw2uSKCOutHnQEm");
+            SysUser sysUser = new SysUser("zhangsan", "$2a$10$ObXD03lHrXlGIvuKE08hqOFCPTM2a4ixY8txV/B/1ldIAvYmTqvRe");
             sysUser.setRoleList(Arrays.asList(admin, developer));
             return sysUser;
         }else if ("lisi".equals(username)) {
-            SysUser sysUser = new SysUser("lisi", "$2a$10$EIfFrWGINQzP.tmtdLd2hurtowwsIEQaPFR9iffw2uSKCOutHnQEm");
+
+            SysUser sysUser = new SysUser("lisi", "$2a$10$ObXD03lHrXlGIvuKE08hqOFCPTM2a4ixY8txV/B/1ldIAvYmTqvRe");
+            System.out.println("=============>"+sysUser);
             sysUser.setRoleList(Arrays.asList(developer));
             return sysUser;
         }
         return null;
     }
+
 
 }

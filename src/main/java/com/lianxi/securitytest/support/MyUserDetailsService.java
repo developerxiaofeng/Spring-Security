@@ -27,6 +27,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println("***********"+username);
         SysUser sysUser = userService.getUserByName(username);
         if (null == sysUser) {
             throw new UsernameNotFoundException(username);
